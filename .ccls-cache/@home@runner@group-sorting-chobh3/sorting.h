@@ -24,21 +24,23 @@ void selectionSort(int a[], int n) {
     display(a,n);
     printf("\n");
   }
+  printf("\n");
 } 
 
-void insertion(int a[],int n){
-  int i, j;
-  int key = a[j];
-  for(int i = 1; i < n; i++){
-    for(j = i - 1; j >= 0; j--){
-      if(key < a[j]) break;
-      else a[j + 1] = a[j];
-      display(a, n);
-    }
-    a[j + 1] = key;
-    display(a, n);
-    printf("\n");
+void insertion(int a[], int n) {
+  int insert;
+  for(int j=1; j<n; j++){
+  int insert = a[j]; 
+  for(int i=j-1; i>=0; i--) {
+      if(insert < a[i]) break;
+      else a[i+1] = a[i];
+      display(a,n);
   }
+  a[i+1] = insert;
+  display(a,n);
+  printf("\n"); 
+}
+  printf("\n");
 }
 
 void bubbleSort(int a[], int n) {

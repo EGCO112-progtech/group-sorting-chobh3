@@ -40,7 +40,7 @@ void insertion(int a[], int n) {
   display(a,n);
   printf("\n"); 
 }
-  printf("\n");
+  printf("\n");  
 }
 
 void bubbleSort(int a[], int n) {

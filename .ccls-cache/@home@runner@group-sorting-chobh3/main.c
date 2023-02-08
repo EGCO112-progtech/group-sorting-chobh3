@@ -11,6 +11,7 @@ int main(int argc,char *argv[]){
     a[i] = atoi(argv[i+2]);
   }
   display(a,N);
+  
   if(!strcmp(argv[1],"insertion")){
     insertion(a,N);
   }

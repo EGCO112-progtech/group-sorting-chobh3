@@ -24,24 +24,25 @@ void selectionSort(int a[], int n) {
       if(a[maxx] < a[j]) maxx = j;
     }
     if(maxx != i) swap(&a[maxx], &a[i]);
-    display(a,n);
     printf("\n");
+    display(a,n);
   }
 } 
 
 
 
 void insertion(int a[],int n){
-  int i,j,x;
-    for(i=1;i<n;i++){
-        x=a[i];
-      for(j=i-1;j>=0 && a[j]<x;j--) {
-        a[j+1]=a[j];
-           display(a,n);
-      }
-      a[j+1]=x;
-         display(a,n);
-      }
+  int i,j;
+  for(i = 0; i < n; i++){
+    j = i;
+    while(j > 0 && a[j - 1] < a[j]){
+      swap(&a[j - 1], &a[j]);
+      j = j - 1;
+    }
+    printf("\n");
+    display(a, n);
+  }
+  printf("\n");
 }
 
 

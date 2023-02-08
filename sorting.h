@@ -21,6 +21,7 @@ void selectionSort(int data[], int length)
 
 
 
+
 void insertion(int a[],int n){
   int i,j,x;
     for(i=1;i<n;i++){

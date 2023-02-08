@@ -24,27 +24,25 @@ void selectionSort(int a[], int n) {
       if(a[maxx] < a[j]) maxx = j;
     }
     if(maxx != i) swap(&a[maxx], &a[i]);
-    printf("\n");
     display(a,n);
+    printf("\n");
   }
 } 
 
-
-
 void insertion(int a[],int n){
-  int i,j;
-  for(i = 0; i < n; i++){
-    j = i;
-    while(j > 0 && a[j - 1] < a[j]){
-      swap(&a[j - 1], &a[j]);
-      j = j - 1;
+  int i, j;
+  int key = a[j];
+  for(int i = 1; i < n; i++){
+    for(j = i - 1; j >= 0; j--){
+      if(key < a[j]) break;
+      else a[j + 1] = a[j];
+      display(a, n);
     }
-    printf("\n");
+    a[j + 1] = key;
     display(a, n);
+    printf("\n");
   }
-  printf("\n");
 }
-
 
 void bubbleSort(int a[], int n) {
 

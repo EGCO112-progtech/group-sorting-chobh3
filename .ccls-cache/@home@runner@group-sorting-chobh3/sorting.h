@@ -7,13 +7,10 @@ void swap(int *a,int *b){
   
 }
 void display(int a[],int n){
-
     int i;
-
     for(i=0;i<n;i++)
         printf("%5d",a[i]);
     printf("\n");
-  
 }
 
 void selectionSort(int a[], int n) { 
@@ -24,27 +21,27 @@ void selectionSort(int a[], int n) {
       if(a[maxx] < a[j]) maxx = j;
     }
     if(maxx != i) swap(&a[maxx], &a[i]);
-    printf("\n");
     display(a,n);
-  }
-} 
-
-
-
-void insertion(int a[],int n){
-  int i,j;
-  for(i = 0; i < n; i++){
-    j = i;
-    while(j > 0 && a[j - 1] < a[j]){
-      swap(&a[j - 1], &a[j]);
-      j = j - 1;
-    }
     printf("\n");
-    display(a, n);
   }
   printf("\n");
-}
+} 
 
+void insertion(int a[], int n) {
+  int insert;
+  for(int j=1; j<n; j++){
+  int insert = a[j]; 
+  for(int i=j-1; i>=0; i--) {
+      if(insert < a[i]) break;
+      else a[i+1] = a[i];
+      display(a,n);
+  }
+  a[i+1] = insert;
+  display(a,n);
+  printf("\n"); 
+}
+  printf("\n");
+}
 
 void bubbleSort(int a[], int n) {
 

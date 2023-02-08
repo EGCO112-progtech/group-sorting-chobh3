@@ -32,21 +32,37 @@ void selectionSort(int a[], int n) {
 
 
 void insertion(int a[],int n){
-
-
+  int i,j,x;
+    for(i=1;i<n;i++){
+        x=a[i];
+      for(j=i-1;j>=0 && a[j]<x;j--) {
+        a[j+1]=a[j];
+           display(a,n);
+      }
+      a[j+1]=x;
+         display(a,n);
+      }
 }
 
 
-void bubbleSort(int a[],int n){
+void bubbleSort(int a[], int n) {
 
-int i,j;
-int sorted;
-// how may pair to compare?
-for(j=1;j<=n-1;j++){
- 
-  display(a,n);
- }
-  
+  int i, j;
+  int sorted;
+  for (i = n - 1; i > 0; i--) {
+    sorted = 0;
+    for (j = 0; j < i; j++) {
+      if (a[j] < a[j + 1]) {
+        swap(&a[j], &a[j + 1]);
+        sorted = 1;
+      }
+      display(a, n);
+    }
+    printf("\n");
+    if (sorted == 0)
+      break;
+  }
+  display(a, n);
 }
 
 
